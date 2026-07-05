@@ -1,0 +1,21 @@
+name = "learning-lean"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["Alex1"]
+srcDir = "src/lean"
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+weak.linter.style.whitespace = false
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.31.0"
+
+[[lean_lib]]
+name = "Alex1"
+roots = ["Module1", "Playground"]
